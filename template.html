@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page</title>
+  <meta name="description" content="">
+  <meta name="theme-color" content="#0b0905">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+  <!--
+    =====================================================================
+    TEMPLATE DE LANDING PAGE — EDITE SÓ ESTE BLOCO "CONFIG"
+    =====================================================================
+    • Troque os textos entre aspas. Não apague vírgulas, chaves { } nem colchetes [ ].
+    • Listas [ ... ] podem ter quantos itens você quiser: copie um item e cole ao lado.
+    • Para esconder uma seção inteira, deixe a lista vazia: []
+    • Texto entre *asteriscos* aparece em dourado.
+    • whatsapp: só números, com 55 + DDD. Ex.: "5511999999999"
+    • Cores: troque os códigos em "cores" para mudar a identidade da página.
+  -->
+  <script>
+    window.CONFIG = {
+      nome: "PAPARAZZI",
+      subtitulo: "GOLD BAR · OSASCO",
+      tituloAba: "Paparazzi Gold Bar | Pagode, Churrasco Grátis e Balada em Osasco",
+      descricaoGoogle: "Pagode, DJ e buffet de churrasco grátis à vontade em Osasco. Reserve sua mesa pelo WhatsApp.",
+
+      whatsapp: "5511989558913",
+      mensagemWhatsapp: "Olá! Vim pelo site e quero reservar uma mesa 🥂",
+      botaoPrincipal: "Reservar mesa",
+
+      redes: [
+        { nome: "Instagram", url: "https://www.instagram.com/paparazzigoldbar/" },
+        { nome: "TikTok", url: "https://www.tiktok.com/@paparazzigoldbar" }
+      ],
+
+      cores: {
+        fundo: "#0b0905", fundo2: "#14100a", cartao: "#1a150d",
+        destaque: "#d4af37", destaqueClaro: "#f5d97a", destaqueEscuro: "#a8841f",
+        texto: "#f6efe0", textoSuave: "#b9ad94"
+      },
+
+      hero: {
+        selo: "Reservas abertas pelo WhatsApp",
+        titulo: "Pagode, DJ e *churrasco grátis* à vontade.",
+        texto: "O rolê de sexta a domingo no Km 18, em Osasco. Você paga só a entrada e o buffet de churrasco é por nossa conta.",
+        botao: "Garantir minha mesa",
+        botaoSecundario: "Ver programação",
+        garantias: ["Entrada a partir de R$ 20", "Crianças até 5 anos não pagam", "Sexta a domingo"]
+      },
+
+      oferta: {
+        etiqueta: "GRÁTIS",
+        titulo: "Domingão do Churrasco",
+        texto: "O almoço de domingo com a família e os amigos, sem conta salgada no fim.",
+        itens: [
+          { icone: "🥩", texto: "*Buffet de churrasco grátis* e à vontade no almoço" },
+          { icone: "🎶", texto: "*Pagode ao vivo* para curtir a tarde inteira" },
+          { icone: "🎟️", texto: "Você paga *só a entrada*" },
+          { icone: "👨‍👩‍👧", texto: "Leve a família: *crianças até 5 anos grátis*" }
+        ],
+        botao: "Reservar para domingo",
+        mensagemWhatsapp: "Olá! Quero reservar uma mesa para o Domingão do Churrasco 🥩"
+      },
+
+      faixa: ["Churrasco grátis", "Pagode ao vivo", "DJ até de madrugada", "Drinks", "Osasco · Km 18"],
+
+      beneficios: {
+        rotulo: "Por que nós",
+        titulo: "Comida, música e festa *no mesmo lugar*",
+        texto: "Aqui você não precisa escolher entre comer bem e curtir. É tudo no mesmo ingresso.",
+        itens: [
+          { icone: "🔥", titulo: "Churrasco grátis", texto: "Buffet de churrasco à vontade incluído com a entrada, nos horários da promoção." },
+          { icone: "🎤", titulo: "Pagode ao vivo", texto: "Roda de pagode e artistas convidados para cantar junto do começo ao fim." },
+          { icone: "🎧", titulo: "DJ na madrugada", texto: "Depois do pagode, a pista esquenta com DJ até tarde da noite." },
+          { icone: "💰", titulo: "Preço justo", texto: "Entrada a partir de R$ 20 e crianças pequenas não pagam." }
+        ]
+      },
+
+      programacao: {
+        rotulo: "Programação",
+        titulo: "Escolha o *seu dia*",
+        texto: "Aberto de sexta a domingo. Confirme a atração da semana pelo WhatsApp.",
+        botao: "Ver atração da semana no WhatsApp",
+        itens: [
+          { dia: "Sexta-feira", titulo: "Sextou com Pagode + DJ", horario: "🕕 18h às 5h", destaque: false,
+            itens: ["Buffet grátis das 18h às 22h", "Pagode ao vivo", "DJ até o amanhecer"] },
+          { dia: "Sábado", titulo: "Noite de Festa", horario: "🕗 A partir da noite", destaque: false,
+            itens: ["Música ao vivo e DJ", "Drinks e cervejas geladas", "Atração da semana no WhatsApp"] },
+          { dia: "Domingo", titulo: "Domingão do Churrasco", horario: "🕛 Almoço · 12h às 16h", destaque: true,
+            itens: ["Churrasco grátis e à vontade", "Pagode a tarde toda", "Ideal para família e amigos"] }
+        ]
+      },
+
+      precos: {
+        rotulo: "Entrada",
+        titulo: "Pague a entrada. *O churrasco é por nossa conta.*",
+        observacao: "Valores sujeitos a alteração em datas especiais e shows. Confirme pelo WhatsApp.",
+        itens: [
+          { quem: "Mulher", valor: "R$ 20", texto: "Com acesso ao buffet nos horários da promoção" },
+          { quem: "Homem", valor: "R$ 30", texto: "Com acesso ao buffet nos horários da promoção" },
+          { quem: "Crianças até 5 anos", valor: "Grátis", texto: "Traga a família inteira para o domingão" }
+        ]
+      },
+
+      passos: {
+        rotulo: "Reserva em 1 minuto",
+        titulo: "Como garantir *sua mesa*",
+        botao: "Reservar agora pelo WhatsApp",
+        itens: [
+          { titulo: "Chame no WhatsApp", texto: "Toque no botão verde. A mensagem já vai pronta." },
+          { titulo: "Informe dia e pessoas", texto: "Diga a data e quantas pessoas vão com você." },
+          { titulo: "Chegue e curta", texto: "Sua mesa fica reservada. É só chegar e curtir." }
+        ]
+      },
+
+      midia: {
+        rotulo: "Falam da gente",
+        titulo: "O bar que virou *notícia em SP*",
+        texto: "Veja o que estão falando sobre nós na imprensa e nas redes.",
+        links: [
+          { nome: "📰 Gazeta de São Paulo", url: "https://www.gazetasp.com.br/gazeta-mais/dicas-da-gazeta/bar-em-sp-oferece-buffet-gratis-de-churrasco/" },
+          { nome: "📰 Agitomax", url: "https://agitomax.com.br/publieditorial/conheca-o-novo-paparazzi-gold-bar-em-osasco/" },
+          { nome: "🎬 TikTok", url: "https://www.tiktok.com/@paparazzigoldbar" },
+          { nome: "📸 Instagram", url: "https://www.instagram.com/paparazzigoldbar/" }
+        ]
+      },
+
+      local: {
+        rotulo: "Onde estamos",
+        titulo: "Km 18, *Osasco · SP*",
+        endereco: "Av. Sport Club Corinthians Paulista, 476, Km 18, Osasco (SP)",
+        buscaMapa: "Paparazzi Gold Bar, Av. Sport Club Corinthians Paulista, 476, Osasco - SP",
+        funcionamento: "Sexta, sábado e domingo",
+        reservas: "Pelo WhatsApp, de forma rápida"
+      },
+
+      faq: {
+        rotulo: "Dúvidas",
+        titulo: "Perguntas *frequentes*",
+        itens: [
+          { p: "O churrasco é grátis mesmo?", r: "Sim. Você paga apenas a entrada e o buffet fica liberado à vontade nos horários da promoção." },
+          { p: "Quanto custa a entrada?", r: "R$ 20 para mulheres e R$ 30 para homens. Crianças até 5 anos não pagam." },
+          { p: "Quais dias abre?", r: "De sexta a domingo." },
+          { p: "Preciso reservar?", r: "É recomendado, principalmente aos domingos. A reserva é feita pelo WhatsApp em menos de um minuto." },
+          { p: "Posso levar crianças?", r: "Sim. Crianças até 5 anos têm entrada gratuita." },
+          { p: "Dá para comemorar aniversário?", r: "Dá sim. Chame no WhatsApp, informe a data e o número de convidados." }
+        ]
+      },
+
+      final: {
+        rotulo: "Neste fim de semana",
+        titulo: "Sua mesa está *esperando por você*",
+        texto: "Domingo costuma lotar. Garanta seu lugar agora e chegue só para curtir.",
+        botao: "Reservar pelo WhatsApp"
+      },
+
+      rodape: "Beba com moderação. Proibida a venda de bebidas alcoólicas para menores de 18 anos."
+    };
+  </script>
+  <style>
+    :root {
+      --bg: #0b0905;
+      --bg-2: #14100a;
+      --card: #1a150d;
+      --line: rgba(212, 175, 55, .22);
+      --gold: #d4af37;
+      --gold-2: #f5d97a;
+      --gold-3: #a8841f;
+      --text: #f6efe0;
+      --muted: #b9ad94;
+      --green: #25d366;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+    .gold-text {
+      background: linear-gradient(100deg, var(--gold-3), var(--gold-2) 40%, var(--gold) 60%, var(--gold-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.12; }
+    h2 { font-size: clamp(1.9rem, 5vw, 2.8rem); margin-bottom: 12px; }
+    .eyebrow {
+      display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 620px; }
+    section { padding: 80px 0; }
+    .center { text-align: center; }
+    .center .lead { margin: 0 auto; }
+
+    /* Botões */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 17px 28px; border-radius: 999px; font-weight: 800; font-size: 1.02rem;
+      transition: transform .15s ease, box-shadow .2s ease; cursor: pointer; border: 0;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-2), var(--gold) 55%, var(--gold-3));
+      color: #1a1205; box-shadow: 0 10px 34px rgba(212, 175, 55, .35);
+    }
+    .btn-gold:hover { box-shadow: 0 14px 44px rgba(212, 175, 55, .5); }
+    .btn-ghost { border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,.03); }
+    .btn svg { width: 22px; height: 22px; flex: none; }
+
+    /* Topo */
+    header {
+      position: fixed; inset: 0 0 auto 0; z-index: 50;
+      background: rgba(11, 9, 5, .78); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: "Playfair Display", serif; font-weight: 900; font-size: 1.3rem; letter-spacing: .02em; }
+    .logo small { font-family: "Inter", sans-serif; font-weight: 600; font-size: .62rem; letter-spacing: .3em; display: block; color: var(--muted); margin-top: -4px; }
+    header .btn { padding: 10px 18px; font-size: .88rem; }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 100svh; display: flex; align-items: center;
+      padding: 110px 0 70px; overflow: hidden;
+      background:
+        radial-gradient(900px 500px at 80% 10%, rgba(212,175,55,.20), transparent 60%),
+        radial-gradient(700px 500px at 0% 90%, rgba(168,132,31,.18), transparent 60%),
+        var(--bg);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image: radial-gradient(rgba(245,217,122,.55) 1px, transparent 1.4px);
+      background-size: 46px 46px;
+      mask-image: radial-gradient(circle at 70% 30%, #000 0, transparent 65%);
+    }
+    .hero .wrap { position: relative; display: grid; gap: 48px; grid-template-columns: 1.15fr .85fr; align-items: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(212,175,55,.08); font-size: .85rem; font-weight: 600; color: var(--gold-2);
+      margin-bottom: 22px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(37,211,102,.7); animation: pulse 1.8s infinite; }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+    .hero h1 { font-size: clamp(2.5rem, 7.5vw, 4.6rem); font-weight: 900; margin-bottom: 20px; }
+    .hero .lead { font-size: 1.15rem; margin-bottom: 30px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+    .trust { display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--muted); font-size: .92rem; }
+    .trust span::before { content: "✓ "; color: var(--gold); font-weight: 800; }
+
+    .ticket {
+      background: linear-gradient(160deg, #221a0c, #120e07);
+      border: 1px solid var(--line); border-radius: 24px; padding: 30px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(245,217,122,.15);
+      position: relative;
+    }
+    .ticket::after {
+      content: attr(data-tag); position: absolute; top: -14px; right: 22px; padding: 6px 14px; border-radius: 8px;
+      background: var(--green); color: #052e14; font-weight: 800; font-size: .78rem; letter-spacing: .12em;
+    }
+    .ticket h3 { font-size: 1.6rem; margin-bottom: 6px; }
+    .ticket p { color: var(--muted); margin-bottom: 20px; }
+    .ticket ul { list-style: none; display: grid; gap: 12px; margin-bottom: 24px; }
+    .ticket li { display: flex; gap: 12px; align-items: flex-start; }
+    .ticket li b { color: var(--gold-2); }
+    .ticket .ico { font-size: 1.3rem; line-height: 1.4; }
+    .ticket .btn { width: 100%; }
+
+    /* Faixa */
+    .marquee { border-block: 1px solid var(--line); background: var(--bg-2); overflow: hidden; padding: 16px 0; }
+    .marquee-track { display: flex; gap: 48px; width: max-content; animation: scroll 28s linear infinite; }
+    .marquee span { font-family: "Playfair Display", serif; font-size: 1.25rem; font-weight: 700; white-space: nowrap; color: var(--gold); }
+    .marquee span i { font-style: normal; color: var(--muted); margin-left: 48px; }
+    @keyframes scroll { to { transform: translateX(-50%); } }
+
+    /* Grids */
+    .grid { display: grid; gap: 20px; margin-top: 44px; }
+    .g3 { grid-template-columns: repeat(3, 1fr); }
+    .g4 { grid-template-columns: repeat(4, 1fr); }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(212,175,55,.5); }
+    .card .ico { font-size: 2rem; margin-bottom: 14px; }
+    .card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: .97rem; }
+
+    /* Programação */
+    .day { position: relative; overflow: hidden; }
+    .day .tag { display: inline-block; font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .day .time { font-weight: 800; font-size: 1.05rem; margin: 10px 0 12px; }
+    .day ul { list-style: none; color: var(--muted); display: grid; gap: 6px; font-size: .95rem; }
+    .day ul li::before { content: "◆ "; color: var(--gold); font-size: .7rem; }
+    .day.hot { background: linear-gradient(160deg, #2a200c, #16110a); border-color: rgba(212,175,55,.55); }
+    .day.hot::before {
+      content: "MAIS PROCURADO"; position: absolute; top: 18px; right: -38px; transform: rotate(35deg);
+      background: var(--gold); color: #1a1205; font-size: .62rem; font-weight: 800; letter-spacing: .1em; padding: 5px 44px;
+    }
+
+    /* Preços */
+    .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+    .price { text-align: center; padding: 34px 24px; }
+    .price .who { color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; }
+    .price .val { font-family: "Playfair Display", serif; font-size: 3.2rem; font-weight: 900; margin: 6px 0; }
+    .price .val small { font-size: 1.2rem; vertical-align: top; margin-right: 4px; }
+    .price p { color: var(--muted); font-size: .93rem; }
+    .note { color: var(--muted); font-size: .85rem; margin-top: 18px; }
+
+    /* Passos */
+    .steps { counter-reset: s; }
+    .step { counter-increment: s; position: relative; padding-top: 58px; }
+    .step::before {
+      content: counter(s); position: absolute; top: 22px; left: 28px; width: 38px; height: 38px; border-radius: 50%;
+      display: grid; place-items: center; font-weight: 800; color: #1a1205;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold-3));
+    }
+    .step { padding: 74px 28px 28px; }
+
+    /* Imprensa / social */
+    .press { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; }
+    .press a {
+      padding: 12px 20px; border: 1px solid var(--line); border-radius: 12px; color: var(--muted); font-weight: 600; font-size: .92rem;
+      transition: color .2s, border-color .2s;
+    }
+    .press a:hover { color: var(--gold-2); border-color: var(--gold); }
+
+    /* Local */
+    .local { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: stretch; margin-top: 44px; }
+    .local .info { display: grid; gap: 18px; align-content: start; }
+    .local .info div { display: flex; gap: 14px; }
+    .local .info b { display: block; }
+    .local .info span { color: var(--muted); font-size: .95rem; }
+    .map { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); min-height: 320px; background: var(--card); }
+    .map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; filter: grayscale(.4) contrast(1.05); }
+
+    /* FAQ */
+    .faq { max-width: 780px; margin: 40px auto 0; display: grid; gap: 12px; }
+    details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--gold); font-size: 1.4rem; line-height: 1; transition: transform .2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details p { color: var(--muted); margin-top: 12px; }
+
+    /* CTA final */
+    .final {
+      text-align: center; border-radius: 28px; padding: 64px 24px;
+      background: radial-gradient(600px 300px at 50% 0, rgba(212,175,55,.25), transparent 70%), linear-gradient(160deg, #241b0b, #100c06);
+      border: 1px solid rgba(212,175,55,.45);
+    }
+    .final h2 { font-size: clamp(2rem, 6vw, 3.2rem); }
+    .final .lead { margin: 0 auto 30px; }
+
+    footer { padding: 40px 0 110px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+    footer nav { display: flex; gap: 18px; }
+    footer nav a:hover { color: var(--gold-2); }
+
+    /* WhatsApp flutuante + barra mobile */
+    .wa-float {
+      position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 62px; height: 62px; border-radius: 50%;
+      background: var(--green); display: grid; place-items: center; box-shadow: 0 10px 30px rgba(37,211,102,.45);
+      animation: bob 3s ease-in-out infinite;
+    }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes bob { 50% { transform: translateY(-5px); } }
+    .mobile-bar { display: none; }
+
+    /* Revelar ao rolar */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .ticket[data-tag=""]::after, .ticket:not([data-tag])::after { display: none; }
+    @media (max-width: 900px) {
+      .hero .wrap, .local { grid-template-columns: 1fr; }
+      .g3, .prices { grid-template-columns: 1fr; }
+      .g4 { grid-template-columns: 1fr 1fr; }
+      section { padding: 64px 0; }
+    }
+    @media (max-width: 560px) {
+      .g4 { grid-template-columns: 1fr; }
+      header .btn { display: none; }
+      .hero-ctas .btn { width: 100%; }
+      .wa-float { display: none; }
+      .mobile-bar {
+        display: flex; gap: 10px; position: fixed; inset: auto 0 0 0; z-index: 60; padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(11,9,5,.94); backdrop-filter: blur(10px); border-top: 1px solid var(--line);
+      }
+      .mobile-bar .btn { flex: 1; padding: 14px 10px; font-size: .95rem; }
+      .mobile-bar .btn-wa { background: var(--green); color: #052e14; flex: 2; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Não precisa editar daqui para baixo. A página é montada a partir do CONFIG. -->
+  <header>
+    <div class="wrap">
+      <a href="#topo" class="logo"><span class="gold-text" data-t="nome"></span><small data-t="subtitulo"></small></a>
+      <a href="#" class="btn btn-gold js-wa" data-t="botaoPrincipal"></a>
+    </div>
+  </header>
+
+  <section class="hero" id="topo">
+    <div class="wrap">
+      <div>
+        <span class="badge"><span class="dot"></span> <span data-t="hero.selo"></span></span>
+        <h1 data-h="hero.titulo"></h1>
+        <p class="lead" data-t="hero.texto"></p>
+        <div class="hero-ctas">
+          <a href="#" class="btn btn-gold js-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg><span data-t="hero.botao"></span></a>
+          <a href="#programacao" class="btn btn-ghost js-prog-link" data-t="hero.botaoSecundario"></a>
+        </div>
+        <div class="trust" id="garantias"></div>
+      </div>
+      <aside class="ticket reveal" id="oferta">
+        <h3 class="gold-text" data-t="oferta.titulo"></h3>
+        <p data-t="oferta.texto"></p>
+        <ul id="oferta-itens"></ul>
+        <a href="#" class="btn btn-gold js-wa" id="oferta-btn" data-t="oferta.botao"></a>
+      </aside>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true" id="faixa-box"><div class="marquee-track" id="faixa"></div></div>
+
+  <section id="beneficios">
+    <div class="wrap center">
+      <span class="eyebrow" data-t="beneficios.rotulo"></span>
+      <h2 data-h="beneficios.titulo"></h2>
+      <p class="lead" data-t="beneficios.texto"></p>
+      <div class="grid g4" id="beneficios-itens"></div>
+    </div>
+  </section>
+
+  <section id="programacao" style="background: var(--bg-2);">
+    <div class="wrap center">
+      <span class="eyebrow" data-t="programacao.rotulo"></span>
+      <h2 data-h="programacao.titulo"></h2>
+      <p class="lead" data-t="programacao.texto"></p>
+      <div class="grid g3" style="text-align:left;" id="programacao-itens"></div>
+      <div style="margin-top:36px;"><a href="#" class="btn btn-gold js-wa" data-t="programacao.botao"></a></div>
+    </div>
+  </section>
+
+  <section id="precos">
+    <div class="wrap center">
+      <span class="eyebrow" data-t="precos.rotulo"></span>
+      <h2 data-h="precos.titulo"></h2>
+      <div class="prices" id="precos-itens"></div>
+      <p class="note" data-t="precos.observacao"></p>
+    </div>
+  </section>
+
+  <section id="passos" style="background: var(--bg-2);">
+    <div class="wrap center">
+      <span class="eyebrow" data-t="passos.rotulo"></span>
+      <h2 data-h="passos.titulo"></h2>
+      <div class="grid g3 steps" style="text-align:left;" id="passos-itens"></div>
+      <div style="margin-top:36px;"><a href="#" class="btn btn-gold js-wa" data-t="passos.botao"></a></div>
+    </div>
+  </section>
+
+  <section id="midia">
+    <div class="wrap center">
+      <span class="eyebrow" data-t="midia.rotulo"></span>
+      <h2 data-h="midia.titulo"></h2>
+      <p class="lead" data-t="midia.texto"></p>
+      <div class="press" id="midia-links"></div>
+    </div>
+  </section>
+
+  <section id="local" style="background: var(--bg-2);">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow" data-t="local.rotulo"></span>
+        <h2 data-h="local.titulo"></h2>
+      </div>
+      <div class="local">
+        <div class="info">
+          <div><span>📍</span><p><b>Endereço</b><span data-t="local.endereco"></span></p></div>
+          <div><span>🗓️</span><p><b>Funcionamento</b><span data-t="local.funcionamento"></span></p></div>
+          <div><span>💬</span><p><b>Reservas</b><span data-t="local.reservas"></span></p></div>
+          <div style="flex-wrap:wrap; gap:12px;">
+            <a class="btn btn-gold js-wa" href="#" data-t="botaoPrincipal"></a>
+            <a class="btn btn-ghost" id="maps-link" href="#" target="_blank" rel="noopener">Abrir no Maps</a>
+          </div>
+        </div>
+        <div class="map"><iframe loading="lazy" title="Mapa" id="mapa" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap center">
+      <span class="eyebrow" data-t="faq.rotulo"></span>
+      <h2 data-h="faq.titulo"></h2>
+      <div class="faq" style="text-align:left;" id="faq-itens"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="final reveal">
+        <span class="eyebrow" data-t="final.rotulo"></span>
+        <h2 data-h="final.titulo"></h2>
+        <p class="lead" data-t="final.texto"></p>
+        <a href="#" class="btn btn-gold js-wa" data-t="final.botao"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div><b class="gold-text" data-t="nome"></b><br><span data-t="rodape"></span></div>
+      <nav id="redes"></nav>
+    </div>
+  </footer>
+
+  <a href="#" class="wa-float js-wa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  </a>
+
+  <div class="mobile-bar">
+    <a href="#local" class="btn btn-ghost">📍 Local</a>
+    <a href="#" class="btn btn-wa js-wa" data-t="botaoPrincipal"></a>
+  </div>
+
+  <script>
+    (function () {
+      var C = window.CONFIG;
+      var $ = function (s) { return document.querySelector(s); };
+      function get(path) { return path.split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, C); }
+      function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+      // *texto* vira dourado
+      function rich(s) { return esc(s).replace(/\*([^*]+)\*/g, '<span class="gold-text">$1</span>'); }
+      function wa(msg) { return "https://wa.me/" + String(C.whatsapp).replace(/\D/g, "") + "?text=" + encodeURIComponent(msg || C.mensagemWhatsapp); }
+      function list(sel, items, fn, sectionSel) {
+        var el = $(sel);
+        if (!items || !items.length) { if (sectionSel) $(sectionSel).style.display = "none"; return; }
+        el.innerHTML = items.map(fn).join("");
+      }
+
+      document.title = C.tituloAba;
+      document.querySelector('meta[name="description"]').content = C.descricaoGoogle;
+
+      var r = document.documentElement.style, k = C.cores || {};
+      [["--bg", k.fundo], ["--bg-2", k.fundo2], ["--card", k.cartao], ["--gold", k.destaque], ["--gold-2", k.destaqueClaro],
+       ["--gold-3", k.destaqueEscuro], ["--text", k.texto], ["--muted", k.textoSuave]].forEach(function (p) { if (p[1]) r.setProperty(p[0], p[1]); });
+
+      document.querySelectorAll("[data-t]").forEach(function (el) { el.textContent = get(el.dataset.t) || ""; });
+      document.querySelectorAll("[data-h]").forEach(function (el) { el.innerHTML = rich(get(el.dataset.h)); });
+
+      list("#garantias", C.hero.garantias, function (g) { return "<span>" + esc(g) + "</span>"; });
+      if (C.oferta && C.oferta.itens && C.oferta.itens.length) {
+        $("#oferta").dataset.tag = C.oferta.etiqueta || "";
+        list("#oferta-itens", C.oferta.itens, function (i) { return '<li><span class="ico">' + esc(i.icone) + "</span><span>" + rich(i.texto) + "</span></li>"; });
+        $("#oferta-btn").dataset.msg = C.oferta.mensagemWhatsapp || "";
+      } else { $("#oferta").style.display = "none"; $(".hero .wrap").style.gridTemplateColumns = "1fr"; }
+
+      if (C.faixa && C.faixa.length) {
+        var f = C.faixa.map(function (t) { return "<span>" + esc(t) + "<i>✦</i></span>"; }).join("");
+        $("#faixa").innerHTML = f + f;
+      } else $("#faixa-box").style.display = "none";
+
+      list("#beneficios-itens", C.beneficios.itens, function (i) {
+        return '<div class="card reveal"><div class="ico">' + esc(i.icone) + "</div><h3>" + esc(i.titulo) + "</h3><p>" + esc(i.texto) + "</p></div>";
+      }, "#beneficios");
+      list("#programacao-itens", C.programacao.itens, function (d) {
+        return '<div class="card day reveal' + (d.destaque ? " hot" : "") + '"><span class="tag">' + esc(d.dia) + "</span><h3>" + esc(d.titulo) +
+          '</h3><div class="time">' + esc(d.horario) + "</div><ul>" + d.itens.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
+      }, "#programacao");
+      if (!C.programacao.itens || !C.programacao.itens.length) $(".js-prog-link").style.display = "none";
+      list("#precos-itens", C.precos.itens, function (p) {
+        return '<div class="card price reveal"><div class="who">' + esc(p.quem) + '</div><div class="val gold-text">' + esc(p.valor) + "</div><p>" + esc(p.texto) + "</p></div>";
+      }, "#precos");
+      list("#passos-itens", C.passos.itens, function (p) {
+        return '<div class="card step reveal"><h3>' + esc(p.titulo) + "</h3><p>" + esc(p.texto) + "</p></div>";
+      }, "#passos");
+      list("#midia-links", C.midia.links, function (l) {
+        return '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.nome) + "</a>";
+      }, "#midia");
+      list("#faq-itens", C.faq.itens, function (q) {
+        return "<details><summary>" + esc(q.p) + "</summary><p>" + esc(q.r) + "</p></details>";
+      }, "#faq");
+      list("#redes", (C.redes || []).concat([{ nome: "Como chegar", url: "#local" }]), function (l) {
+        return '<a href="' + esc(l.url) + '"' + (l.url[0] === "#" ? "" : ' target="_blank" rel="noopener"') + ">" + esc(l.nome) + "</a>";
+      });
+
+      var q = encodeURIComponent(C.local.buscaMapa || C.local.endereco);
+      $("#mapa").src = "https://www.google.com/maps?q=" + q + "&output=embed";
+      $("#maps-link").href = "https://www.google.com/maps/search/?api=1&query=" + q;
+
+      document.querySelectorAll(".js-wa").forEach(function (a) {
+        a.href = wa(a.dataset.msg);
+        a.target = "_blank";
+        a.rel = "noopener";
+      });
+
+      var items = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window)) { items.forEach(function (el) { el.classList.add("in"); }); return; }
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
